@@ -12,7 +12,7 @@ if url:
     img=qrcode.make(url)
     with io.BytesIO() as f:
         img.save(f,format="PNG")
-        png=f.getbalue()
+        png=f.getvalue()
     st.write(url)
     st.image(png)
     st.download_button("Download",date=png,file_name="urlqr.png")
